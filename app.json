@@ -1,14 +1,10 @@
 {
   "expo": {
-    "name": "React Native Template Expo Kitten",
-    "slug": "react-native-template-expo-kitten",
+    "name": "Canaria Flowers",
+    "slug": "canaria-flowers",
     "privacy": "public",
     "sdkVersion": "37.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,13 +16,11 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
-    "description": "Template built using Expo, UI Kitten, React Native, React Native for Web & React Native Navigation.",
-    "githubUrl": "https://github.com/elgsantos/react-native-template-expo-kitten"
+    "description": "Canaria Flowers mobile app for prices",
+    "githubUrl": "https://github.com/AhmadTakkoush/canaria-flowers"
   }
 }

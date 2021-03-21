@@ -1,30 +1,33 @@
-import React from 'react';
+import React from 'react'
 
-import { Divider, Icon, TopNavigation, TopNavigationAction } from '@ui-kitten/components';
+import {
+  Divider,
+  Icon,
+  TopNavigation,
+  TopNavigationAction
+} from '@ui-kitten/components'
 
 const NavigationBar = (props) => {
-  const navigateToConfig = () => {
-    props.navigation.navigate('Config');
-  };
+  const navigateToCall = () => {
+    props.navigation.navigate('Call')
+  }
 
-  const SettingsIcon = (props) => (
-    <Icon {...props} name='settings' />
-  );
+  const PhoneIcon = (props) => <Icon {...props} name='phone' />
 
   const renderSettingsAction = () => (
-    <TopNavigationAction icon={SettingsIcon} onPress={navigateToConfig} />
-  );
+    <TopNavigationAction icon={PhoneIcon} onPress={navigateToCall} />
+  )
 
   return (
     <>
       <TopNavigation
-        title='React Native Expo Kitten Template'
+        title='Canaria Flowers'
         alignment='center'
         rightControls={renderSettingsAction()}
       />
       <Divider />
     </>
-  );
+  )
 }
 
-export default NavigationBar;
+export default NavigationBar
