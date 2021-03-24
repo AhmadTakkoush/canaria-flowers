@@ -1,16 +1,16 @@
-import { light, dark } from "@eva-design/eva";
+import { light, dark } from '@eva-design/eva'
 
 const themes = {
   light: {
     theme: light,
-    icon: "sun",
-    text: "LIGHT",
+    icon: 'sun',
+    text: 'LIGHT'
   },
   dark: {
     theme: dark,
-    icon: "moon",
-    text: "DARK",
-  },
-};
+    icon: 'moon',
+    text: 'DARK'
+  }
+}
 
-export default themes;
+export default themes

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { StyleSheet, Linking, View } from 'react-native'
+import { StyleSheet, Linking, View, Image, ImageBackground } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import heartIcons from '../../resources/heartIcons'
-import { Layout, Button, Text } from '@ui-kitten/components'
+import { Layout, Text } from '@ui-kitten/components'
 import NavigationBar from '../../components/layout/header/NavigationBar'
 
 import { SocialIcon } from 'react-native-elements'
@@ -11,29 +10,61 @@ import { SocialIcon } from 'react-native-elements'
 import { SectionGrid } from 'react-native-super-grid'
 
 export const HomeScreen = (props) => {
-  const [icon, setIcon] = useState(heartIcons[0])
-
-  const [items, setItems] = React.useState([
-    { name: 'TURQUOISE', code: '#1abc9c' },
-    { name: 'EMERALD', code: '#2ecc71' },
-    { name: 'PETER RIVER', code: '#3498db' },
-    { name: 'AMETHYST', code: '#9b59b6' },
-    { name: 'WET ASPHALT', code: '#34495e' },
-    { name: 'GREEN SEA', code: '#16a085' },
-    { name: 'NEPHRITIS', code: '#27ae60' },
-    { name: 'BELIZE HOLE', code: '#2980b9' },
-    { name: 'WISTERIA', code: '#8e44ad' },
-    { name: 'MIDNIGHT BLUE', code: '#2c3e50' },
-    { name: 'SUN FLOWER', code: '#f1c40f' },
-    { name: 'CARROT', code: '#e67e22' },
-    { name: 'ALIZARIN', code: '#e74c3c' },
-    { name: 'CLOUDS', code: '#ecf0f1' },
-    { name: 'CONCRETE', code: '#95a5a6' },
-    { name: 'ORANGE', code: '#f39c12' },
-    { name: 'PUMPKIN', code: '#d35400' },
-    { name: 'POMEGRANATE', code: '#c0392b' },
-    { name: 'SILVER', code: '#bdc3c7' },
-    { name: 'ASBESTOS', code: '#7f8c8d' }
+  const [items] = React.useState([
+    //Plants
+    {
+      name: 'Orchid',
+      price: '20$',
+      uri:
+        'https://cdn.pixabay.com/photo/2015/04/28/11/19/flower-743373_1280.jpg'
+    },
+    {
+      name: 'Cyclamen',
+      price: '5$',
+      uri:
+        'https://cdn.pixabay.com/photo/2020/02/18/17/10/cyclamen-4860174_1280.jpg'
+    },
+    {
+      name: 'Calceolaria',
+      price: '3$',
+      uri:
+        'https://cdn.pixabay.com/photo/2018/03/15/17/43/plant-3228944_1280.jpg'
+    },
+    { name: 'Dracaena', price: 'Call for price', uri: '' },
+    { name: 'Snake Plant', price: '7$ - 9$', uri: '' },
+    {
+      name: 'Aglaonema ',
+      price: '20$',
+      uri:
+        'https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482914_1280.jpg'
+    },
+    {
+      name: 'Cactus',
+      price: '20$',
+      uri:
+        'https://cdn.pixabay.com/photo/2016/11/20/08/03/cactus-1842095_1280.jpg'
+    },
+    {
+      name: 'Succulent',
+      price: '20$',
+      uri:
+        'https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483_1280.jpg'
+    },
+    { name: 'Aloe vera', price: '20$' },
+    { name: 'Lily', price: '20$' },
+    { name: 'Ficus', price: '20$' },
+    { name: 'Schefflera (Umbrella Plant)', price: '20$' },
+    { name: 'Cecus(?)', price: '20$' },
+    //Flowers
+    { name: 'Rose', price: '1$' },
+    { name: 'Gerbera', price: '3$' },
+    { name: 'Crithmum', price: '3$' },
+    { name: 'Lilium', price: '1$' },
+    { name: 'Stargazer', price: '1.5$' },
+    { name: 'Bird of Paradise', price: '0.5$' },
+    { name: 'Camomile', price: '2.5$' },
+    // Supplies
+    { name: 'Soil', price: '1$' }
   ])
 
   return (
@@ -49,24 +80,23 @@ export const HomeScreen = (props) => {
             sections={[
               {
                 title: 'Plants',
-                data: items.slice(0, 6)
+                data: items.slice(0, 13)
               },
               {
                 title: 'Flowers',
-                data: items.slice(6, 12)
+                data: items.slice(13, 20)
               },
               {
                 title: 'Supplies',
-                data: items.slice(12, 20)
+                data: items.slice(20, 21)
               }
             ]}
             style={styles.gridView}
             renderItem={({ item, section, index }) => (
-              <View
-                style={[styles.itemContainer, { backgroundColor: item.code }]}
-              >
+              <View style={[styles.itemContainer]}>
+                <Image source={items.uri} />
                 <Text style={styles.itemName}>{item.name}</Text>
-                <Text style={styles.itemCode}>{item.code}</Text>
+                <Text style={styles.itemCode}>{item.price}</Text>
               </View>
             )}
             renderSectionHeader={({ section }) => (
