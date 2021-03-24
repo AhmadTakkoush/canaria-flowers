@@ -50,7 +50,9 @@ export const CallScreen = ({ navigation }) => {
         size='large'
         source={require('../../../assets/icon.png')}
       />
-      <Text style={styles.canaria}>Canaria Flowers</Text>
+      <Text style={styles.canaria}>
+        Canaria Flowers {'\n'} Flowers for every occasion
+      </Text>
     </SafeAreaView>
   )
 }
