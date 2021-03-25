@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Button, Linking, Text, ScrollView } from 'react-native'
+import { StyleSheet, Button, Linking, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import MapView from 'react-native-maps'
@@ -24,7 +24,7 @@ export const CallScreen = ({ navigation }) => {
   )
 
   return (
-    <ScrollView style={styles.safeAreaView}>
+    <SafeAreaView style={styles.safeAreaView}>
       <TopNavigation
         title='Contact'
         alignment='center'
@@ -52,14 +52,11 @@ export const CallScreen = ({ navigation }) => {
       <Text style={styles.canaria}>
         Canaria Flowers {'\n'} Flowers for every occasion
       </Text>
-    </ScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  safeAreaView: {
-    flex: 1
-  },
   map: {
     height: 400
   },
