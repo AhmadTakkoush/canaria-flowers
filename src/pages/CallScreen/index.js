@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Button, Linking } from 'react-native'
+import { StyleSheet, Button, Linking, Text, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import MapView from 'react-native-maps'
@@ -8,7 +8,6 @@ import {
   Avatar,
   Divider,
   Icon,
-  Text,
   TopNavigation,
   TopNavigationAction
 } from '@ui-kitten/components'
@@ -25,7 +24,7 @@ export const CallScreen = ({ navigation }) => {
   )
 
   return (
-    <SafeAreaView style={styles.safeAreaView}>
+    <ScrollView style={styles.safeAreaView}>
       <TopNavigation
         title='Contact'
         alignment='center'
@@ -53,18 +52,13 @@ export const CallScreen = ({ navigation }) => {
       <Text style={styles.canaria}>
         Canaria Flowers {'\n'} Flowers for every occasion
       </Text>
-    </SafeAreaView>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   safeAreaView: {
     flex: 1
-  },
-  layout: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   map: {
     height: 400
