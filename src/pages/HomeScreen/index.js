@@ -5,6 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Layout, Text } from '@ui-kitten/components'
 import NavigationBar from '../../components/layout/header/NavigationBar'
 
+import DrawerSimpleUsageShowcase from '../../components/layout/header/Drawer'
+
 import { SocialIcon } from 'react-native-elements'
 
 import { SectionGrid } from 'react-native-super-grid'

@@ -35,10 +35,10 @@ export const CallScreen = ({ navigation }) => {
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: 33.8966137,
-          longitude: 35.4810892,
-          latitudeDelta: 0.0043,
-          longitudeDelta: 0.0034
+          longitude: 35.48122710681048,
+          latitude: 33.89750439906285,
+          latitudeDelta: 0,
+          longitudeDelta: 0
         }}
       ></MapView>
       <Button
