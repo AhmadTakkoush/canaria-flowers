@@ -3,7 +3,6 @@
     "name": "Canaria Flowers",
     "slug": "canaria-flowers",
     "privacy": "public",
-    "sdkVersion": "37.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "0.0.1",
     "orientation": "portrait",
@@ -17,8 +16,9 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
+    "android": {
+      "package": "com.ahmadtakkoush.canariaflowers",
+      "versionCode": 1
     },
     "description": "Canaria Flowers mobile app for prices"
   }

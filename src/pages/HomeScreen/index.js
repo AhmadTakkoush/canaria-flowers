@@ -81,12 +81,12 @@ export const HomeScreen = (props) => {
       uri:
         'https://cdn.apartmenttherapy.info/image/upload/v1591496724/gen-workflow/product-listing/umbrellatree.jpg'
     },
-    {
-      name: 'Cecus(?)',
-      price: '3$',
-      uri:
-        'https://cdn.pixabay.com/photo/2015/04/28/11/19/flower-743373_1280.jpg'
-    },
+    // {
+    //   name: 'Cecus(?)',
+    //   price: '3$',
+    //   uri:
+    //     'https://cdn.pixabay.com/photo/2015/04/28/11/19/flower-743373_1280.jpg'
+    // },
     //Flowers
     {
       name: 'Rose',
@@ -152,15 +152,15 @@ export const HomeScreen = (props) => {
             sections={[
               {
                 title: 'Plants',
-                data: items.slice(0, 12)
+                data: items.slice(0, 11)
               },
               {
                 title: 'Flowers',
-                data: items.slice(12, 19)
+                data: items.slice(11, 18)
               },
               {
                 title: 'Supplies',
-                data: items.slice(19, 21)
+                data: items.slice(18, 21)
               }
             ]}
             style={styles.gridView}
